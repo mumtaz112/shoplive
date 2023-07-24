@@ -1,7 +1,7 @@
 
 import './App.css'
 import React from 'react';
-import { Route, Routes } from "react-router-dom";
+import { Route,Routes } from "react-router-dom";
 import Headerr from './Components/Headerr';
 import Home from './Pages/Home';
 import AllProduct from './Components/AllProduct';

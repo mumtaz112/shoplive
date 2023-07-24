@@ -6,7 +6,7 @@ import Products from '../Pages/Products';
 // import { useParams } from 'react-router-dom';
 function ProductCategory() {
   const [myData, setMyData] = useState([]);
-  const [category,setCategory]=useState([]);
+  const [category, setCategory] = useState([]);
   const [isError, setIsError] = useState("");
   useEffect(() => {
     axios
@@ -26,21 +26,21 @@ function ProductCategory() {
       </div>
 
       <div className="container category">
-        <div className="row">
-        
-         {
-         
-          category.map((val,key)=> <div className='col-md-3 shadow-lg p-4 border rounded mx-4 my-2' key={key} > 
-          
-  
-          {/* {<Link to={`/Products/category/${category}`} className='text-decoration-none ' >{val.toUpperCase()}</Link>} */}
+        <div className="row my-5">
 
-          <Link
-        className="text-decoration-none"
-        to={`/products/category/${category}`}>{val.toUpperCase()}</Link>
-        
-          </div>)
-         }
+          {
+
+            category.map((val, key) => <div className='col-md-3 shadow-lg p-4 border rounded mx-4 my-2' key={key} >
+
+
+              {/* {<Link to={`/Products/category/${category}`} className='text-decoration-none ' >{val.toUpperCase()}</Link>} */}
+
+              <Link
+                className="text-decoration-none"
+                to={`/products/category/${val}`}>{val.toUpperCase()}</Link>
+
+            </div>)
+          }
         </div>
       </div>
     </>
